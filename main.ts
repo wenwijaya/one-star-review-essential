@@ -1,18 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// One-Star Review of Something Essential (program/v1).
-// Writes a single deadpan one-star review, 160 characters or fewer,
-// of an everyday essential to /output/entry.txt.
-const REVIEW =
-  "One star. Sleep charges eight hours a night, every night, and still delivers a version of me that needs coffee to operate the coffee machine.";
+const review =
+  "One star. Gravity has held everything down for billions of years without a day off, and still drops my phone face-first every time.";
 
-function main(): void {
-  try {
-    mkdirSync("/output", { recursive: true });
-    writeFileSync("/output/entry.txt", REVIEW, "utf8");
-  } catch (error) {
-    console.error("Failed to write entry:", error);
-  }
-}
-
-main();
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", review, "utf8");
